@@ -1,11 +1,12 @@
 {
   "name": "build-standard",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "How to make high-quality software: one causal model, derived maturity, priced waivers, gates that actually run.",
   "scheme": "SCHEME.md",
   "adoption": "ADOPTION.md",
   "related": {
-    "ship-standard": "https://github.com/miounet11/ship-standard"
+    "ship-standard": "https://github.com/miounet11/ship-standard",
+    "creativity-is-engineering": "https://github.com/miounet11/creativity-is-engineering"
   },
   "practices": [
     {
@@ -36,7 +37,7 @@
       "id": "real-path",
       "title": "真路径上创建",
       "path": "practices/real-path.md",
-      "status": "stable"
+      "status": "draft"
     },
     {
       "id": "authority",
@@ -54,7 +55,7 @@
       "id": "archive",
       "title": "病例归档",
       "path": "practices/archive.md",
-      "status": "stable"
+      "status": "draft"
     }
   ]
 }

@@ -27,6 +27,7 @@
 | `PROBE-1` | PR 模板含七步 | block |
 | `PROBE-2` | 本表每行标了 warn/block | block |
 | `LAUNCH-5` | 文档与安装包无明文凭据 | block（不可豁免） |
+| `LAUNCH-11` | 第三条配置路径不靠公布主机地址 | block（不可豁免；脚本标 not machine-checked） |
 
 ---
 

@@ -44,6 +44,41 @@ if (catalog.version !== pkg.version) {
 if (catalog.description !== pkg.description) {
   fail('VERSION-DRIFT', 'catalog.json and package.json describe this repo differently — two pitches is two authorities');
 }
+if (!catalog.related?.['ship-standard'] || !catalog.related?.['creativity-is-engineering']) {
+  fail('RELATED-MISSING', 'catalog.related must name ship-standard and creativity-is-engineering');
+}
+const changelog = await read('CHANGELOG.md');
+if (!changelog.includes(`## ${catalog.version}`)) {
+  fail('VERSION-CHANGELOG', `CHANGELOG.md has no section ## ${catalog.version}`);
+}
+const readme = await read('README.md');
+if (!/creativity-is-engineering/.test(readme) || !/ship-standard/.test(readme)) {
+  fail('RELATED-MISSING', 'README.md must name ship-standard and creativity-is-engineering');
+}
+if (/\d+\s*条[^。\n]*门禁/.test(readme)) {
+  fail('COUNT-ROT', 'README.md must not hard-code a gate count; point at ship-standard gates.json');
+}
+
+try {
+  const sibling = JSON.parse(await readFile(resolve(ROOT, '../ship-standard/gates.json'), 'utf8'));
+  if (sibling.version !== pinned.version) {
+    fail('PIN-STALE', `pinned ${pinned.version} != sibling ship-standard ${sibling.version}; run npm run pin`);
+  }
+} catch {
+  /* no sibling checkout in this environment */
+}
+
+const gateScript = await read('templates/quality-gate.mjs');
+const fallback = gateScript.match(/let NON_WAIVABLE = \[([^\]]+)\]/);
+if (!fallback) {
+  fail('NONWAIVABLE-DRIFT', 'templates/quality-gate.mjs has no NON_WAIVABLE fallback');
+} else {
+  const listed = [...fallback[1].matchAll(/'([A-Z]+-\d+)'/g)].map((m) => m[1]).sort();
+  const expected = [...pinned.nonWaivable].sort();
+  if (listed.join(',') !== expected.join(',')) {
+    fail('NONWAIVABLE-DRIFT', `quality-gate fallback [${listed.join(', ')}] != pin [${expected.join(', ')}]`);
+  }
+}
 
 // --- catalog ↔ files ------------------------------------------------------
 for (const p of catalog.practices) {
@@ -159,8 +194,11 @@ for (const f of mdFiles) {
   }
 }
 if (!scheme.includes('ship-standard')) fail('SCHEME-BOUNDARY', 'SCHEME.md must point acceptance at ship-standard');
+if (!scheme.includes('creativity-is-engineering')) {
+  fail('SCHEME-BOUNDARY', 'SCHEME.md must name creativity-is-engineering');
+}
 for (const id of pinned.nonWaivable) {
-  if (!scheme.includes(id)) warn('SCHEME-BOUNDARY', `${id} is non-waivable upstream but §6 does not mention it`);
+  if (!scheme.includes(id)) fail('SCHEME-BOUNDARY', `${id} is non-waivable upstream but §6 does not mention it`);
 }
 
 // --- doc-system rules applied to ourselves --------------------------------

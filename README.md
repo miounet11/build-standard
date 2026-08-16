@@ -18,7 +18,8 @@
 | [SCHEME.md](./SCHEME.md) | 因果模型、十二条铁律、成熟度 L0–L3、豁免机制、明确不适用与明确未覆盖 |
 | [ADOPTION.md](./ADOPTION.md) | 老仓库第一小时 / 第一天 / 第一周怎么止血，含第一次跑的真实输出 |
 | [templates/](./templates/) | 产品仓可直接复制的空合同、STATUS 生成器与可执行门禁 |
-| [ship-standard](https://github.com/miounet11/ship-standard) | 能不能上线：60 条带 id 的门禁 |
+| [ship-standard](https://github.com/miounet11/ship-standard) | 能不能上线：带稳定 id 的门禁（条数以那边 `gates.json` 为准） |
+| [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) | 洞察有没有落成可引用的定律 |
 | [STATUS.md](./STATUS.md) | 生成的本仓状态 |
 | [CHANGELOG.md](./CHANGELOG.md) | 标准自己的版本与兼容承诺 |
 
@@ -41,15 +42,16 @@
 
 ---
 
-## 边界：本仓 vs ship-standard
+## 边界：三仓不重叠
 
-同一件事只有一个权威，两仓不重叠。**本仓不判定任何一条门禁的含义，也不列举哪条 id 在哪一级阻断。**
+同一件事只有一个权威。**本仓不判定任何一条门禁的含义，也不列举哪条 id 在哪一级阻断。**
 
 | 问题 | 权威 |
 |------|------|
 | 为什么会不高质量、铁律、成熟度**规则**、豁免**规则** | 本仓 [SCHEME.md](./SCHEME.md) |
 | 怎么创建（七步执行、分工、仓库记忆、最小变绿） | 本仓 [practices/](./practices/) |
-| 门禁 id / stage / severity / 是否可豁免 / **各级具体要求哪些** | ship-standard [gates.json](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
+| 能不能上线（门禁 id / stage / severity / 是否可豁免 / 各级要求哪些） | [ship-standard](https://github.com/miounet11/ship-standard) [gates.json](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
+| 创造有没有落成定律 | [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) |
 | 产品仓空合同与落地脚本 | 本仓 [templates/](./templates/) |
 
 成熟度不是本仓手写的清单，是一条推导规则：**级别 `Ln` 阻断 `stage` 在本级内的 `block` 门禁**，

@@ -1,6 +1,6 @@
 {
   "$comment": "PINNED COPY of ship-standard/gates.json. Do not edit by hand; run npm run pin to refresh. It exists so this repo can validate every gate id it references offline, and so a rename upstream shows up as a diff here instead of silently rotting.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "levels": {
     "L0": {
       "name": "看见",
@@ -46,6 +46,7 @@
   },
   "nonWaivable": [
     "LAUNCH-5",
+    "LAUNCH-11",
     "PRESHIP-4"
   ],
   "gates": [
@@ -105,6 +106,12 @@
     },
     {
       "id": "LAUNCH-10",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-11",
       "dimension": "launch",
       "stage": "release",
       "severity": "block"
@@ -207,6 +214,14 @@
       "id": "KERNEL-3",
       "dimension": "quality-kernel",
       "stage": "contract",
+      "severity": "block",
+      "deprecated": true,
+      "supersededBy": "KERNEL-7"
+    },
+    {
+      "id": "KERNEL-7",
+      "dimension": "quality-kernel",
+      "stage": "contract",
       "severity": "block"
     },
     {
@@ -235,6 +250,14 @@
     },
     {
       "id": "PATH-2",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "block",
+      "deprecated": true,
+      "supersededBy": "PATH-7"
+    },
+    {
+      "id": "PATH-7",
       "dimension": "acceptance-path",
       "stage": "release",
       "severity": "block"

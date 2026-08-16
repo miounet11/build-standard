@@ -74,14 +74,14 @@ const STAGE = {
   'DOC-1': 'see', 'DOC-2': 'see', 'DOC-3': 'see', 'DOC-5': 'see',
   'DIAG-1': 'see', 'KERNEL-1': 'see', 'COMPOUND-1': 'see', 'COMPOUND-2': 'see',
   'COMPOUND-6': 'see', 'PROBE-1': 'see', 'PROBE-2': 'see', 'PROBE-6': 'see',
-  'COMPOUND-5': 'release', 'LAUNCH-5': 'release',
+  'COMPOUND-5': 'release', 'LAUNCH-5': 'release', 'LAUNCH-11': 'release',
 };
 const DIMENSION = {
   'DOC-1': 'doc-system', 'DOC-2': 'doc-system', 'DOC-3': 'doc-system', 'DOC-5': 'doc-system',
   'DIAG-1': 'diagnose', 'KERNEL-1': 'quality-kernel',
   'COMPOUND-1': 'compound', 'COMPOUND-2': 'compound', 'COMPOUND-5': 'compound', 'COMPOUND-6': 'compound',
   'PROBE-1': 'probe', 'PROBE-2': 'probe', 'PROBE-6': 'probe',
-  'LAUNCH-5': 'launch',
+  'LAUNCH-5': 'launch', 'LAUNCH-11': 'launch',
 };
 let APPLIES = {
   launch: 'all', resilience: 'opt-in', diagnose: 'all', 'quality-kernel': 'opt-in',
@@ -97,8 +97,9 @@ const LEVELS = {
 const NOT_CHECKED = {
   'DIAG-1': '分层与每层证据是产品知识，脚本判不了',
   'PROBE-6': '「同一 PR 补了风险」是过程，静态判不了；用 PR 模板兜',
+  'LAUNCH-11': '第三条路径有没有靠公布主机地址，脚本判不了',
 };
-let NON_WAIVABLE = ['LAUNCH-5', 'PRESHIP-4'];
+let NON_WAIVABLE = ['LAUNCH-5', 'LAUNCH-11', 'PRESHIP-4'];
 let knownGateIds = null;
 
 const vendored = await readOr('product/gates.json');

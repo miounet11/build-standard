@@ -6,7 +6,8 @@
 2. 在 [catalog.json](./catalog.json)、根 [README.md](./README.md)、[practices/README.md](./practices/README.md) 各加一行。
    三处不一致 `npm run verify` 会红（`LIST-DRIFT`）—— 这条规则本仓自己也守。
 3. 产品故事放 [examples/](./examples/)，不要把密钥、账号、内网写进实践正文。
-4. 不复制 [ship-standard](https://github.com/miounet11/ship-standard) 已有的验收门禁；这里只写「怎么做出来」。
+4. 不复制 [ship-standard](https://github.com/miounet11/ship-standard) 已有的验收门禁，也不写 [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) 的护城河。这里只写「怎么做出来」。
+5. 不要为本仓发明 `BUILD-*` 门禁 id。
 
 ## 加一条铁律
 

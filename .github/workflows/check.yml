@@ -35,8 +35,9 @@ jobs:
           node-version: 20
       - name: Refresh the pinned gates.json from upstream
         run: npm run pin
-      - name: Report if ship-standard moved
+      - name: Fail if ship-standard moved
         run: |
           if ! git diff --exit-code checks/gates.pinned.json; then
-            echo "::warning::ship-standard/gates.json changed upstream. Run 'npm run pin' and review."
+            echo "ship-standard/gates.json changed upstream. Run npm run pin and review."
+            exit 1
           fi

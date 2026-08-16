@@ -7,6 +7,7 @@
 | 为什么会不高质量、铁律、成熟度**规则**、豁免**规则** | 本页 |
 | 七步怎么执行、分工、仓库记忆、最小变绿 | 本仓 [`practices/`](./practices/) |
 | 门禁 **id / stage / severity / 是否可豁免 / 各级要求哪些** | [ship-standard `gates.json`](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
+| 洞察有没有落成可引用的定律 | [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) |
 | 老仓库怎么接进来 | [ADOPTION.md](./ADOPTION.md) |
 
 本页**不判定**任何一条门禁的含义，也不列举哪条 id 在哪一级阻断 —— 那会造出第二份映射。
@@ -149,7 +150,7 @@ opt-in 纬度（如 `resilience`、`pre-ship`）只有产品在 `product/README.
 - 过期的豁免 = 门禁失败。
 - **行只追加，不删除。** 关闭时把状态改成 `closed`，保留行 —— 删行会把「第几次」擦掉，那正是被滥用的地方。
 - 同一 id 第 3 次豁免直接拒：要么改产品，要么改门禁（走 ship-standard 的 CHANGELOG）。
-- `gates.json` 的 `nonWaivable` 里的门禁**不可豁免**（当前是 `LAUNCH-5` 安装包/仓库无密钥、`PRESHIP-4` 生产守卫）。这一组对应泄漏 5。
+- `gates.json` 的 `nonWaivable` 里的门禁**不可豁免**。当前钉住：`LAUNCH-5`（安装包/仓库无密钥）、`LAUNCH-11`（第三条路径不靠公布主机地址）、`PRESHIP-4`（生产守卫）。以钉住的表为准，不要在本页另抄一份会过期的名单。这一组对应泄漏 5。
 
 ---
 
@@ -234,14 +235,15 @@ node scripts/render-status.mjs && node scripts/quality-gate.mjs
 
 ### 未覆盖（重要，但还没有门禁）
 
-写在这里，是为了不让「堵不到泄漏就不加」变成假装这些问题不存在。它们的归宿是 ship-standard 的新纬度，不是本页的新铁律。
+写在这里，是为了不让「堵不到泄漏就不加」变成假装这些问题不存在。不要为本仓新开纬度，也不要催 ship-standard 用已经拒绝的名字（`compat` / `secrets` / `observe` / `rollback` / `host`）再开一份。
 
-| 缺口 | 归宿 | 现在怎么办 |
-|------|------|------------|
-| 数据/配置迁移与向下兼容 | ship `compat`（计划中） | 破坏性迁移按铁律 2 处理：人拍板 + 可回滚 |
-| 依赖与供应链（锁版本、CVE、SBOM） | ship `secrets` / 新 `supply`（计划中） | 按铁律 11 定期重跑，把证书与依赖到期写进风险册 |
-| 可观测性与事故响应 | ship `observe`、`rollback`（计划中） | 至少让日志能区分各类失败（见 ship `resilience`） |
-| 性能与容量预算 | 用 `COMPOUND-4` 的基线文件承载 | 把预算写成基线，回退即红 |
+| 缺口 | 现行归宿 | 现在怎么办 |
+|------|----------|------------|
+| 数据/配置迁移与向下兼容 | ship `PRESHIP-3`、`LAUNCH-10` | 破坏性迁移按铁律 2 处理：人拍板 + 可回滚 |
+| 密钥与配置第三条路 | ship `LAUNCH-5` `LAUNCH-11` | 不进包、不靠公布主机地址 |
+| 依赖与供应链（锁版本、CVE、SBOM） | 尚无 id | 按铁律 11 定期重跑，把证书与依赖到期写进风险册 |
+| 可观测性与事故响应 | ship `RESIL-8`、`LAUNCH-10` | 日志能分清各类失败；回滚条件预先写死 |
+| 性能与容量预算 | ship `COMPOUND-4` | 把预算写成基线，回退即红 |
 | 无障碍与国际化 | 尚无 id | 有用户就写进 `spec/`，别等标准 |
 | 成本（七步的时间与 token 代价） | 尚无 id | 承认它存在；这正是「平凡改动」被滥用的动机，所以 §5 把它变成可机器判断的条件 |
 

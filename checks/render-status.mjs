@@ -48,6 +48,7 @@ Standard version: \`${catalog.version}\` · gates pinned at ship-standard \`${pi
 - 总纲：[SCHEME.md](SCHEME.md) — ${leakCount} 个泄漏推出 ${laws.length} 条铁律
 - 落地顺序：[ADOPTION.md](ADOPTION.md)
 - 上线判定：[ship-standard](${catalog.related['ship-standard']})
+- 洞察落成定律：[creativity-is-engineering](${catalog.related['creativity-is-engineering']})
 
 铁律清单（括号是它堵的泄漏）：
 

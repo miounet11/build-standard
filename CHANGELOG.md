@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0
+
+三个模型再次独立审查：钉住的门禁落后于 ship-standard 0.8.0，三仓边界缺 creativity，README 手写「60 条」会过期。
+
+- 钉住 [ship-standard 0.8.0](https://github.com/miounet11/ship-standard)：63 个 id，含 `LAUNCH-11` / `KERNEL-7` / `PATH-7`。
+- `catalog.related` 与 README / SCHEME 补上 [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering)。
+- 不可豁免名单与 pin 对齐：`LAUNCH-5` `LAUNCH-11` `PRESHIP-4`。`quality-gate.mjs` 的 fallback 必须等于 pin，否则自检红。
+- README 不再手写门禁条数。§11「计划中的纬度」改指现行 id；拒绝再催 `compat` / `observe` / `rollback` 新纬度。
+- `archive`、`real-path` 标 draft：本仓只写怎么做，验收句留在 ship。
+- 上游 pin 漂移在 CI 里改为失败，不再只警告。有 sibling checkout 时，本地 `verify` 也会因 pin 落后而红。
+
+本仓仍然不自造 `BUILD-*` 门禁 id。
+
 ## 0.4.0
 
 三个模型（gemini-3.7 / grok-4.6 / opus-5）各自独立审查 0.3.0，三份报告一致指向同一件事：
