@@ -1,0 +1,40 @@
+{
+  "name": "build-standard",
+  "version": "0.1.0",
+  "description": "How we create programs: owner defines done, repo remembers, agent runs the loop.",
+  "related": {
+    "ship-standard": "https://github.com/miounet11/ship-standard"
+  },
+  "practices": [
+    {
+      "id": "loop",
+      "title": "七步创建环",
+      "path": "practices/loop.md",
+      "status": "stable"
+    },
+    {
+      "id": "owner-agent",
+      "title": "人定做成，Agent 执行",
+      "path": "practices/owner-agent.md",
+      "status": "stable"
+    },
+    {
+      "id": "repo-memory",
+      "title": "仓库当记忆",
+      "path": "practices/repo-memory.md",
+      "status": "stable"
+    },
+    {
+      "id": "smallest-green",
+      "title": "最小变绿",
+      "path": "practices/smallest-green.md",
+      "status": "stable"
+    },
+    {
+      "id": "real-path",
+      "title": "真路径上创建",
+      "path": "practices/real-path.md",
+      "status": "stable"
+    }
+  ]
+}
