@@ -1,0 +1,10 @@
+{
+  "name": "fixture-green",
+  "version": "1.2.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "status": "node scripts/render-status.mjs",
+    "gate": "node scripts/quality-gate.mjs"
+  }
+}

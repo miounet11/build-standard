@@ -1,0 +1,417 @@
+{
+  "$comment": "PINNED COPY of ship-standard/gates.json. Do not edit by hand; run npm run pin to refresh. It exists so this repo can validate every gate id it references offline, and so a rename upstream shows up as a diff here instead of silently rotting.",
+  "version": "0.7.0",
+  "levels": {
+    "L0": {
+      "name": "看见",
+      "stages": [
+        "see"
+      ]
+    },
+    "L1": {
+      "name": "改得动",
+      "stages": [
+        "see",
+        "change-safe"
+      ]
+    },
+    "L2": {
+      "name": "有合同",
+      "stages": [
+        "see",
+        "change-safe",
+        "contract"
+      ]
+    },
+    "L3": {
+      "name": "可上线",
+      "stages": [
+        "see",
+        "change-safe",
+        "contract",
+        "release"
+      ]
+    }
+  },
+  "applies": {
+    "launch": "all",
+    "resilience": "opt-in",
+    "diagnose": "all",
+    "quality-kernel": "opt-in",
+    "acceptance-path": "opt-in",
+    "pre-ship": "opt-in",
+    "compound": "opt-in",
+    "probe": "all",
+    "doc-system": "all"
+  },
+  "nonWaivable": [
+    "LAUNCH-5",
+    "PRESHIP-4"
+  ],
+  "gates": [
+    {
+      "id": "LAUNCH-1",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-2",
+      "dimension": "launch",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-3",
+      "dimension": "launch",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-4",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-5",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-6",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-7",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-8",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-9",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "LAUNCH-10",
+      "dimension": "launch",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-1",
+      "dimension": "resilience",
+      "stage": "contract",
+      "severity": "block",
+      "deprecated": true,
+      "supersededBy": "LAUNCH-2"
+    },
+    {
+      "id": "RESIL-2",
+      "dimension": "resilience",
+      "stage": "see",
+      "severity": "block",
+      "deprecated": true,
+      "supersededBy": "LAUNCH-1"
+    },
+    {
+      "id": "RESIL-3",
+      "dimension": "resilience",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-4",
+      "dimension": "resilience",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-5",
+      "dimension": "resilience",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-6",
+      "dimension": "resilience",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-7",
+      "dimension": "resilience",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "RESIL-8",
+      "dimension": "resilience",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DIAG-1",
+      "dimension": "diagnose",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DIAG-2",
+      "dimension": "diagnose",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "DIAG-3",
+      "dimension": "diagnose",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "DIAG-4",
+      "dimension": "diagnose",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "DIAG-5",
+      "dimension": "diagnose",
+      "stage": "see",
+      "severity": "warn"
+    },
+    {
+      "id": "KERNEL-1",
+      "dimension": "quality-kernel",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "KERNEL-2",
+      "dimension": "quality-kernel",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "KERNEL-3",
+      "dimension": "quality-kernel",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "KERNEL-4",
+      "dimension": "quality-kernel",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "KERNEL-5",
+      "dimension": "quality-kernel",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "KERNEL-6",
+      "dimension": "quality-kernel",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PATH-1",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PATH-2",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PATH-3",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PATH-4",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "warn"
+    },
+    {
+      "id": "PATH-5",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PATH-6",
+      "dimension": "acceptance-path",
+      "stage": "release",
+      "severity": "warn"
+    },
+    {
+      "id": "PRESHIP-1",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PRESHIP-2",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "warn"
+    },
+    {
+      "id": "PRESHIP-3",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PRESHIP-4",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PRESHIP-5",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PRESHIP-6",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "PRESHIP-7",
+      "dimension": "pre-ship",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "COMPOUND-1",
+      "dimension": "compound",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "COMPOUND-2",
+      "dimension": "compound",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "COMPOUND-3",
+      "dimension": "compound",
+      "stage": "see",
+      "severity": "warn"
+    },
+    {
+      "id": "COMPOUND-4",
+      "dimension": "compound",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "COMPOUND-5",
+      "dimension": "compound",
+      "stage": "release",
+      "severity": "block"
+    },
+    {
+      "id": "COMPOUND-6",
+      "dimension": "compound",
+      "stage": "see",
+      "severity": "warn"
+    },
+    {
+      "id": "PROBE-1",
+      "dimension": "probe",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "PROBE-2",
+      "dimension": "probe",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "PROBE-3",
+      "dimension": "probe",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "PROBE-4",
+      "dimension": "probe",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "PROBE-5",
+      "dimension": "probe",
+      "stage": "contract",
+      "severity": "block"
+    },
+    {
+      "id": "PROBE-6",
+      "dimension": "probe",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-1",
+      "dimension": "doc-system",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-2",
+      "dimension": "doc-system",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-3",
+      "dimension": "doc-system",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-4",
+      "dimension": "doc-system",
+      "stage": "change-safe",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-5",
+      "dimension": "doc-system",
+      "stage": "see",
+      "severity": "block"
+    },
+    {
+      "id": "DOC-6",
+      "dimension": "doc-system",
+      "stage": "see",
+      "severity": "warn"
+    }
+  ]
+}

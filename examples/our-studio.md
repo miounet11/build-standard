@@ -2,7 +2,7 @@
 
 这是本工作室的创建法摘要。浏览器、远控、长跑自动化，都是同一套做法，不是三套天才流程。不写账号、密钥、内网。
 
-对照五份实践：[loop](../practices/loop.md) · [owner-agent](../practices/owner-agent.md) · [repo-memory](../practices/repo-memory.md) · [smallest-green](../practices/smallest-green.md) · [real-path](../practices/real-path.md)。
+对照八份实践：[loop](../practices/loop.md) · [owner-agent](../practices/owner-agent.md) · [repo-memory](../practices/repo-memory.md) · [authority](../practices/authority.md) · [status](../practices/status.md) · [archive](../practices/archive.md) · [smallest-green](../practices/smallest-green.md) · [real-path](../practices/real-path.md)。
 
 ---
 

@@ -1,12 +1,14 @@
 {
   "name": "build-standard",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
-  "description": "How we create programs: owner defines done, repo remembers, agent runs the loop.",
+  "description": "How to make high-quality software: one causal model, derived maturity, priced waivers, gates that actually run.",
   "scripts": {
-    "check": "node checks/check.mjs",
     "status": "node checks/render-status.mjs",
+    "test:gate": "node checks/gate-test.mjs",
+    "check": "node checks/check.mjs",
+    "pin": "node checks/pin-gates.mjs",
     "verify": "npm run status && npm run check"
   },
   "license": "MIT"

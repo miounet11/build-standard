@@ -8,7 +8,24 @@ If the code disagrees with a spec, **one of them is wrong** — the PR that reso
 
 当前级别：**L0 看见** ← 诚实填写，见 [SCHEME §4](https://github.com/miounet11/build-standard/blob/main/SCHEME.md)。
 
+**升级到期日：2026-12-31** ← 必填。没有时钟的级别是一张永久免罪符，门禁会拒。
+
+适用纬度：compound、quality-kernel ← opt-in 纬度只有写在这里才绑定。
+长跑自动化加 `resilience`，要上架加 `pre-ship`，双端加 `acceptance-path`。
+纬度清单见 [gates.json](https://github.com/miounet11/ship-standard/blob/main/gates.json) 的 `applies`。
+
 高于本级的门禁跑 `warn`；本级全绿两轮才升级。只准往上升，降级要写豁免。
+
+## 主柱
+
+用户看得见的主柱（产品力取其中最小值，不取平均）：
+
+| 主柱 | 现在几分 | 判定方式 |
+|------|----------|----------|
+| … | … | … |
+
+没有用户可见主柱的产品（库、CLI、编译器）在这里写 `主柱不适用`，并写明用什么代替
+（例如 API 兼容性 + 基准），见 SCHEME §11。
 
 ## 权威表（每类只认一份）
 

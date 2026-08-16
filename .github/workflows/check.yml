@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  # Leak 6: the world moves while the repo is frozen. A standard that only runs
+  # on PR cannot notice that its pinned upstream, or its own links, have rotted.
+  schedule:
+    - cron: '0 3 * * 1'
 
 jobs:
   self-check:
@@ -17,5 +21,22 @@ jobs:
         run: npm run status
       - name: Fail if STATUS was stale
         run: git diff --exit-code STATUS.md
-      - name: Scheme, gate ids, links, secrets
+      - name: Run the shipped gate against red / green / waived fixtures
+        run: npm run test:gate
+      - name: Scheme, leak tags, gate ids, links, list drift
         run: npm run check
+
+  pin-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Refresh the pinned gates.json from upstream
+        run: npm run pin
+      - name: Report if ship-standard moved
+        run: |
+          if ! git diff --exit-code checks/gates.pinned.json; then
+            echo "::warning::ship-standard/gates.json changed upstream. Run 'npm run pin' and review."
+          fi
