@@ -54,5 +54,5 @@
 
 ## 以后还怎么创建
 
-新产品仍然走：人定做成 → 生成仓库记忆 → 七步环 → 真路径 → 对照 ship-standard 门禁。  
+总纲只认 [SCHEME.md](../SCHEME.md)。新产品仍然走：人定做成 → 权威表 + 生成 STATUS → 七步环 → 真路径 → 对照 ship-standard 门禁。  
 新习惯只加 `practices/` 里的一篇，不另起一套神话。

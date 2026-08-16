@@ -1,7 +1,8 @@
 {
   "name": "build-standard",
-  "version": "0.1.0",
-  "description": "How we create programs: owner defines done, repo remembers, agent runs the loop.",
+  "version": "0.2.0",
+  "description": "How to make high-quality software: one scheme, one authority table, generated status, archived cases.",
+  "scheme": "SCHEME.md",
   "related": {
     "ship-standard": "https://github.com/miounet11/ship-standard"
   },
@@ -34,6 +35,24 @@
       "id": "real-path",
       "title": "真路径上创建",
       "path": "practices/real-path.md",
+      "status": "stable"
+    },
+    {
+      "id": "authority",
+      "title": "权威表",
+      "path": "practices/authority.md",
+      "status": "stable"
+    },
+    {
+      "id": "status",
+      "title": "生成的状态页",
+      "path": "practices/status.md",
+      "status": "stable"
+    },
+    {
+      "id": "archive",
+      "title": "病例归档",
+      "path": "practices/archive.md",
       "status": "stable"
     }
   ]
