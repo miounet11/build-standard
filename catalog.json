@@ -1,12 +1,14 @@
 {
   "name": "build-standard",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "How to make high-quality software: one causal model, derived maturity, priced waivers, gates that actually run.",
   "scheme": "SCHEME.md",
   "adoption": "ADOPTION.md",
   "related": {
     "ship-standard": "https://github.com/miounet11/ship-standard",
-    "creativity-is-engineering": "https://github.com/miounet11/creativity-is-engineering"
+    "creativity-is-engineering": "https://github.com/miounet11/creativity-is-engineering",
+    "ability-harness": "https://github.com/miounet11/ability-harness",
+    "review-harness": "https://github.com/miounet11/review-harness"
   },
   "practices": [
     {

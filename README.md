@@ -20,6 +20,8 @@
 | [templates/](./templates/) | 产品仓可直接复制的空合同、STATUS 生成器与可执行门禁 |
 | [ship-standard](https://github.com/miounet11/ship-standard) | 能不能上线：带稳定 id 的门禁（条数以那边 `gates.json` 为准） |
 | [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) | 洞察有没有落成可引用的定律 |
+| [ability-harness](https://github.com/miounet11/ability-harness) | 这个模型在六面上能不能修交接本 |
+| [review-harness](https://github.com/miounet11/review-harness) | 这轮迭代 / 升级 / 修 bug 有没有漏审查 |
 | [STATUS.md](./STATUS.md) | 生成的本仓状态 |
 | [CHANGELOG.md](./CHANGELOG.md) | 标准自己的版本与兼容承诺 |
 
@@ -42,7 +44,7 @@
 
 ---
 
-## 边界：三仓不重叠
+## 边界：一问一仓
 
 同一件事只有一个权威。**本仓不判定任何一条门禁的含义，也不列举哪条 id 在哪一级阻断。**
 
@@ -52,6 +54,8 @@
 | 怎么创建（七步执行、分工、仓库记忆、最小变绿） | 本仓 [practices/](./practices/) |
 | 能不能上线（门禁 id / stage / severity / 是否可豁免 / 各级要求哪些） | [ship-standard](https://github.com/miounet11/ship-standard) [gates.json](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
 | 创造有没有落成定律 | [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) |
+| 这个模型在六面上能不能修交接本 | [ability-harness](https://github.com/miounet11/ability-harness) |
+| 这轮迭代 / 升级 / 修 bug 有没有漏审查 | [review-harness](https://github.com/miounet11/review-harness) |
 | 产品仓空合同与落地脚本 | 本仓 [templates/](./templates/) |
 
 成熟度不是本仓手写的清单，是一条推导规则：**级别 `Ln` 阻断 `stage` 在本级内的 `block` 门禁**，
@@ -114,7 +118,9 @@ Two things here are language-independent and are the point of the repo:
   into it.
 
 Gate ids, stages and severities live in [ship-standard](https://github.com/miounet11/ship-standard);
-this repo only defines how levels are derived from them. Both are MIT.
+this repo only defines how levels are derived from them. Six-surface eval lives in
+[ability-harness](https://github.com/miounet11/ability-harness); iteration review lives in
+[review-harness](https://github.com/miounet11/review-harness). Both harnesses are MIT.
 
 ---
 

@@ -8,6 +8,8 @@
 | 七步怎么执行、分工、仓库记忆、最小变绿 | 本仓 [`practices/`](./practices/) |
 | 门禁 **id / stage / severity / 是否可豁免 / 各级要求哪些** | [ship-standard `gates.json`](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
 | 洞察有没有落成可引用的定律 | [creativity-is-engineering](https://github.com/miounet11/creativity-is-engineering) |
+| 这个模型在六面上能不能修交接本 | [ability-harness](https://github.com/miounet11/ability-harness) |
+| 这轮迭代 / 升级 / 修 bug 有没有漏审查 | [review-harness](https://github.com/miounet11/review-harness) |
 | 老仓库怎么接进来 | [ADOPTION.md](./ADOPTION.md) |
 
 本页**不判定**任何一条门禁的含义，也不列举哪条 id 在哪一级阻断 —— 那会造出第二份映射。

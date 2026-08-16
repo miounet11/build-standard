@@ -38,6 +38,8 @@ If the code disagrees with a spec, **one of them is wrong** — the PR that reso
 | 本纬度不变量 | [spec/](./spec/) 对应文件 | 同主题的第二份「总纲」 |
 | 哪条门禁暂时过不了 | [waivers.md](./waivers.md)（带到期日） | 口头约定、静默跳过 |
 | 怎么创建 / 怎么上线 | [build-standard SCHEME](https://github.com/miounet11/build-standard/blob/main/SCHEME.md) · [ship-standard](https://github.com/miounet11/ship-standard) | 再写第三本手册 |
+| 六面 AI 能不能修交接本 | [ability-harness](https://github.com/miounet11/ability-harness) | 产品仓里另做一套 broken seed |
+| 这轮迭代有没有漏审查 | [review-harness](https://github.com/miounet11/review-harness) | 把审查循环抄进 launch 纬度 |
 
 未进本表却自称 SoT 的文件，文首必须写：`服从本表 · 角色：历史|子集|操作备忘`。
 

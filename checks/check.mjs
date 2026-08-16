@@ -47,6 +47,9 @@ if (catalog.description !== pkg.description) {
 if (!catalog.related?.['ship-standard'] || !catalog.related?.['creativity-is-engineering']) {
   fail('RELATED-MISSING', 'catalog.related must name ship-standard and creativity-is-engineering');
 }
+if (!catalog.related?.['ability-harness'] || !catalog.related?.['review-harness']) {
+  fail('RELATED-MISSING', 'catalog.related must name ability-harness and review-harness');
+}
 const changelog = await read('CHANGELOG.md');
 if (!changelog.includes(`## ${catalog.version}`)) {
   fail('VERSION-CHANGELOG', `CHANGELOG.md has no section ## ${catalog.version}`);
@@ -54,6 +57,9 @@ if (!changelog.includes(`## ${catalog.version}`)) {
 const readme = await read('README.md');
 if (!/creativity-is-engineering/.test(readme) || !/ship-standard/.test(readme)) {
   fail('RELATED-MISSING', 'README.md must name ship-standard and creativity-is-engineering');
+}
+if (!/ability-harness/.test(readme) || !/review-harness/.test(readme)) {
+  fail('RELATED-MISSING', 'README.md must name ability-harness and review-harness');
 }
 if (/\d+\s*条[^。\n]*门禁/.test(readme)) {
   fail('COUNT-ROT', 'README.md must not hard-code a gate count; point at ship-standard gates.json');

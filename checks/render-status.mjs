@@ -83,6 +83,8 @@ ${templates.map((t) => `- [\`${t}\`](templates/${t})`).join('\n')}
 
 - 先读 SCHEME.md，再按 ADOPTION.md 落地，最后用 ship-standard 的门禁 id 判定能不能发。
 - 引用门禁请用 id（例如 \`PATH-3\`）；过不了写 \`product/waivers.md\`，必须带到期日与 owner。
+- 六面修交接本去 [ability-harness](https://github.com/miounet11/ability-harness)。
+- 迭代 / 升级 / 修 bug 审查去 [review-harness](https://github.com/miounet11/review-harness)。
 `;
 
 await writeFile(join(ROOT, 'STATUS.md'), out);

@@ -36,6 +36,12 @@
 
 ---
 
+## 接到评测与审查
+
+用户会碰到的 AI 通道（GUI / CLI / agent / TUI / IDE / 办公）用 [ability-harness](https://github.com/miounet11/ability-harness) 同一套 broken seed，只换 `--model --channel --harness`。版本迭代、升级、修 bug 用 [review-harness](https://github.com/miounet11/review-harness)：威胁模型 → 扫描 → 分诊 → 补丁验证梯。
+
+创建未在真路径上跑过该跑的尺子，这版对用户仍不存在。**算不算通过**仍是 ship `PATH-7` / `LAUNCH-*`，本页不另写门禁。
+
 ## 产出
 
 同版本正式包记录、主路径勾选、用户通道版本号。

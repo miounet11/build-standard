@@ -1,6 +1,6 @@
 {
   "$comment": "PINNED COPY of ship-standard/gates.json. Do not edit by hand; run npm run pin to refresh. It exists so this repo can validate every gate id it references offline, and so a rename upstream shows up as a diff here instead of silently rotting.",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "levels": {
     "L0": {
       "name": "看见",

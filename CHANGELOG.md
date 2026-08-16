@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.0
+
+家族地图补上评测尺和审查循环。钉住 ship-standard 0.8.1。`archive` / `real-path` 仍为 draft，补上怎么接到两套尺子。
+
+- `catalog.related` 与 README / SCHEME 补上 [ability-harness](https://github.com/miounet11/ability-harness) 与 [review-harness](https://github.com/miounet11/review-harness)。
+- 钉住 [ship-standard 0.8.1](https://github.com/miounet11/ship-standard)：无新门禁，只是家族链接。
+- `archive.md`：搬归档前先对照审查循环，验收仍是 ship `DOC-4`。
+- `real-path.md`：用户路径上的 AI 通道用 ability-harness；升级修 bug 用 review-harness。验收仍是 `PATH-7`。
+- 本仓仍然不自造 `BUILD-*` 门禁 id。
+
 ## 0.5.0
 
 三个模型再次独立审查：钉住的门禁落后于 ship-standard 0.8.0，三仓边界缺 creativity，README 手写「60 条」会过期。
