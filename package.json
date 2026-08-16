@@ -1,0 +1,13 @@
+{
+  "name": "build-standard",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "How we create programs: owner defines done, repo remembers, agent runs the loop.",
+  "scripts": {
+    "check": "node checks/check.mjs",
+    "status": "node checks/render-status.mjs",
+    "verify": "npm run status && npm run check"
+  },
+  "license": "MIT"
+}

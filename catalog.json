@@ -1,8 +1,9 @@
 {
   "name": "build-standard",
-  "version": "0.2.0",
-  "description": "How to make high-quality software: one scheme, one authority table, generated status, archived cases.",
+  "version": "0.3.0",
+  "description": "How to make high-quality software: one scheme, maturity levels, priced waivers, generated status.",
   "scheme": "SCHEME.md",
+  "adoption": "ADOPTION.md",
   "related": {
     "ship-standard": "https://github.com/miounet11/ship-standard"
   },

@@ -1,0 +1,21 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  self-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Regenerate STATUS
+        run: npm run status
+      - name: Fail if STATUS was stale
+        run: git diff --exit-code STATUS.md
+      - name: Scheme, gate ids, links, secrets
+        run: npm run check
