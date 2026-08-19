@@ -5,6 +5,7 @@
   "scheme": "SCHEME.md",
   "adoption": "ADOPTION.md",
   "related": {
+    "begin": "https://github.com/miounet11/begin",
     "ship-standard": "https://github.com/miounet11/ship-standard",
     "creativity-is-engineering": "https://github.com/miounet11/creativity-is-engineering",
     "ability-harness": "https://github.com/miounet11/ability-harness",

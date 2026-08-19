@@ -50,6 +50,7 @@
 
 | 问题 | 权威 |
 |------|------|
+| 新产品从短需求怎么开工、方案怎么被系统制定成合同 | [begin](https://github.com/miounet11/begin)（AGENTS.md + practices/formulate.md） |
 | 为什么会不高质量、铁律、成熟度**规则**、豁免**规则** | 本仓 [SCHEME.md](./SCHEME.md) |
 | 怎么创建（七步执行、分工、仓库记忆、最小变绿） | 本仓 [practices/](./practices/) |
 | 能不能上线（门禁 id / stage / severity / 是否可豁免 / 各级要求哪些） | [ship-standard](https://github.com/miounet11/ship-standard) [gates.json](https://github.com/miounet11/ship-standard/blob/main/gates.json) |
@@ -65,6 +66,8 @@
 ---
 
 ## 今天先做这四步
+
+新产品从短需求开工请先去 [begin](https://github.com/miounet11/begin)；已有合同才来这里跑创建循环。
 
 1. 抄 [templates/product-README.md](./templates/product-README.md) 到产品仓 `product/README.md`，写上当前级别（老项目诚实写 L0）**和升级到期日**。
 2. 声称「当前唯一版本」的文档改名或搬进 `docs/archive/`。

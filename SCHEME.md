@@ -4,6 +4,7 @@
 
 | 这个问题 | 权威 |
 |----------|------|
+| 新产品从短需求怎么开工、方案怎么被系统制定成合同 | [begin](https://github.com/miounet11/begin)（AGENTS.md + practices/formulate.md） |
 | 为什么会不高质量、铁律、成熟度**规则**、豁免**规则** | 本页 |
 | 七步怎么执行、分工、仓库记忆、最小变绿 | 本仓 [`practices/`](./practices/) |
 | 门禁 **id / stage / severity / 是否可豁免 / 各级要求哪些** | [ship-standard `gates.json`](https://github.com/miounet11/ship-standard/blob/main/gates.json) |

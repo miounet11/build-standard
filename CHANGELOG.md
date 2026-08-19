@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.1
+
+家族指针：新产品开工去 begin。兼容更新，无门禁 id 变化。
+
+- 权威表（README / SCHEME / templates/product-README）新增一行：「新产品从短需求怎么开工、方案怎么被系统制定成合同」→ [begin](https://github.com/miounet11/begin)。
+- `catalog.related` 新增 `begin`。
+- 本仓仍然只回答「怎么创建（七步）」和「为什么会不高质量」，不抄 begin 的 formulate 流程。
+
 ## 0.6.0
 
 家族地图补上评测尺和审查循环。钉住 ship-standard 0.8.1。`archive` / `real-path` 仍为 draft，补上怎么接到两套尺子。
