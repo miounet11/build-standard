@@ -31,6 +31,7 @@ If the code disagrees with a spec, **one of them is wrong** — the PR that reso
 
 | 问题 | 只读这份 | 不要读 |
 |------|----------|--------|
+| 新产品从短需求怎么开工 | [begin](https://github.com/miounet11/begin)（AGENTS.md + practices/formulate.md） | 本仓直接跑七步 |
 | 下一步做什么 | [roadmap.md](./roadmap.md) | 聊天、目标文件、AGENTS 里的进度 |
 | 现在坏在哪 | 仓库根 `STATUS.md`（生成） | 任何手写 CURRENT-STATUS |
 | 做成什么样 | [quality-gates.md](./quality-gates.md) + 本纬度 `spec/` | 任务清单打勾 |
